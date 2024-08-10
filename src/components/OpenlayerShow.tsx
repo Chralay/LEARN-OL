@@ -1,24 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { Map, View, Collection } from 'ol'; // 地图Collection
+import { useEffect } from 'react';
+import { Map, View } from 'ol'; // 地图Collection
 import * as Proj from 'ol/proj'; // 转化
-import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer'; // 图层
-import { XYZ, Vector as VectorSource } from 'ol/source'; // 资源
-import Draw, { createBox } from 'ol/interaction/Draw';
-import { Interaction, Modify } from 'ol/interaction';
-import { Style, Stroke, Fill, Circle as CircleStyle } from 'ol/style'; // 样式
+import { Tile as TileLayer } from 'ol/layer'; // 图层
+// import { XYZ, Vector as VectorSource } from 'ol/source'; // 资源
+import { XYZ } from 'ol/source'; // 资源
+// import Draw from 'ol/interaction/Draw';
 import './OpenlayerShow.css'
-import Geometry, { Type } from 'ol/geom/Geometry';
-import Feature from 'ol/render/Feature';
 
-let drawSource: VectorSource<any> | undefined = undefined;
-let drawLayer = null;
-let draw: Draw | null = null;
-let modify = null;
+// let drawSource: VectorSource<any> | undefined = undefined;
+// let drawLayer = null;
+// let draw: Draw | null = null;
+// let modify = null;
 
 const OpenlayerShow = () => {
-    const [map, setMap] = useState<Map | null>(null); // 地图
-    const [view, setView] = useState<View | null>(null); // 地图视图
-    const [drawType, setDrawType] = useState<number | null>(null); // 画板类型 1圆形 2矩形 3多边形
+    // const [map, setMap] = useState<Map | null>(null); // 地图
+    // const [view, setView] = useState<View | null>(null); // 地图视图
+    // const [drawType, setDrawType] = useState<number | null>(null); // 画板类型 1圆形 2矩形 3多边形
 
     // 设置绘制类型
     // function setDraw(type: number) {
@@ -142,7 +139,7 @@ const OpenlayerShow = () => {
             })
         });
         // 创建实例
-        const _map = new Map({
+        new Map({
             target: 'map',
             layers: [tileLayer], // 使用高德图层
             view: viewObj

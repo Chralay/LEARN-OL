@@ -1,7 +1,7 @@
 import View from "ol/View"
 import Map from "ol/Map"
-import { useEffect, useRef } from "react"
-import * as Proj from 'ol/proj'; // 转化
+import { useEffect } from "react"
+// import * as Proj from 'ol/proj'; // 转化
 import TileLayer from "ol/layer/Tile";
 import XYZ from "ol/source/XYZ";
 import {defaults as ControlDefaults, } from 'ol/control/defaults'
