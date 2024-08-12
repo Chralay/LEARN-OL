@@ -1,15 +1,15 @@
 
 import './App.css'
-// import OpenlayerShow from './components/OpenlayerShow'
-import OpenlayerSimple from './components/OpenlayerSimple'
+import OpenlayerCluster from './components/OpenlayerCluster'
 
 function App() {
 
   return (
     <div style={{width: '100%', height: '100%'}}>
-      {/* <OpenlayerShow /> */}
-      <OpenlayerSimple />
+      {/* <OpenlayerSimple /> */}
 
+      <OpenlayerCluster />
+      
       {/* React.StrictMode */}
     </div>
       
